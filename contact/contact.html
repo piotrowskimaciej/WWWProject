@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>contact</title>
+		<meta HTTP-EQUIV="Content-Type" charset="utf-8">
+		<style>
+            /* FORMS */
+            input[type=submit], input[type=text], textarea {
+                background-image: -moz-linear-gradient(top,  rgba(255,255,255,0.2) 30%, rgba(251,251,251,0.2) 31%, rgba(0,0,0,0.1) 100%);
+                background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%,rgba(255,255,255,0.2)), color-stop(31%,rgba(251,251,251,0.2)), color-stop(100%,rgba(0,0,0,0.1)));
+                background-image: -webkit-linear-gradient(top,  rgba(255,255,255,0.2) 30%,rgba(251,251,251,0.2) 31%,rgba(0,0,0,0.1) 100%);
+                background-image: -o-linear-gradient(top,  rgba(255,255,255,0.2) 30%,rgba(251,251,251,0.2) 31%,rgba(0,0,0,0.1) 100%);
+                background-image: -ms-linear-gradient(top,  rgba(255,255,255,0.2) 30%,rgba(251,251,251,0.2) 31%,rgba(0,0,0,0.1) 100%);
+                background-image: linear-gradient(top,  rgba(255,255,255,0.2) 30%,rgba(251,251,251,0.2) 31%,rgba(0,0,0,0.1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ffffff', endColorstr='#1a000000',GradientType=0 );
+                
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                border-radius: 6px;
+                border: 1px solid;
+                box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+                
+                font-size: 11px;
+                font-weight: bold;
+                text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+                text-decoration: none;
+                
+                position: relative;
+                line-height: 16px;
+                padding:0px 14px;
+                margin-bottom:8px;
+            }
+        
+            /* SUBMIT */
+            input[type=submit] {
+                background-color: #FF8400;
+                border-color: #F27D00;
+                color:#FFF;
+                height: 30px;
+                cursor:pointer;
+            }
+        
+            /* TEXT INPUT */
+            input[type=text] {
+                background-color: #0ea4e4;
+                border-color: #0b81b4;
+                color:#FFF;
+                height: 30px;
+            }
+        
+            /* TEXTAREA */
+            textarea {
+                background-color: #0ea4e4;
+                border-color: #0b81b4;
+                color:#FFF;
+                min-width:290px;
+                min-height:120px;
+                padding-top:8px;
+            }
+		</style>
+		<link rel="Stylesheet" href="../styles.css">
+	</head>
+	<body>
+		<header>
+			<div id="frame1">
+			</div>
+			<div id="image1">
+				<a href="../index.html"><p id="fontmain">adiós!</p></a>
+				<p id="fontmain2">By Free CSS Templates</p>
+			</div>
+			<nav id="menu1">
+				<ul>
+					<li id="button1">
+						<a href="../index.html"><u>H</u>ome</a>
+					</li>
+					<li id="button2">
+						<a href="../plan/plan.html"><u>P</u>lan a Cruise</a>
+					</li>
+					<li id="button3">
+						<a href="../support/support.html">Customer <u>S</u>upport</a>
+					</li>
+					<li id="button4">
+						<a href="../about/about.html">About <u>U</u>s</a>
+					</li>
+					<li id="button5">
+						<a href="contact.html"><u>C</u>ontact Us</a>
+					</li>
+				</ul>
+			</nav>
+			<div id="image2">
+				<img id="image21" src="pictures/header_picture2.png">
+			</div>
+			<div id="frame2">
+			</div>
+		</header>
+		<div id="menu2">
+			<p id="font">Recent Updates</p><span id="first"></span>
+			<div id="frame3"></div>
+			<ul id="list1">
+				<li>
+					<p class="fontlist">
+						<b>July 12, 2007</b><br>
+						<a target="_blank" href="http://pl.lipsum.com/"><b><u class="fontcolor">Lorem Ipsum Dolor</u></b></a><br><br>
+						In posuere eleifend odio quisque semper augue mattis
+						wisi maecenas ligula. <a href="../updates/updates.html"><u class="fontcolor">Read more...</u></a>
+					</p>
+				</li>
+				<li>
+					<p class="fontlist">
+						<b>July 01, 2007</b><br>
+						<a target="_blank" href="http://www.lorem.biz/loremipsum.php"><b><u class="fontcolor">Sagittis Et Convallis</u></b></a><br><br>
+						Donec leo, vivamus fermentum nibh in augue praesent lorem
+						ipsum dolor a lacus at urna congue rutrum.
+						<a href="../updates/updates.html"><u class="fontcolor">Read more...</u></a>
+					</p>
+				</li>
+				<li>
+					<p class="fontlist">
+						<b>June 30, 2007</b><br>
+						<a target="_blank" href="http://www.freecsstemplates.org/preview/joyousness/"><b><u class="fontcolor">Integer Nisl Risus</u></b></a><br><br>
+						Quisque dictum integer nisl risus, sagittis convallis, rutum
+						id, congue, and nibh. <a href="../updates/updates.html"><u class="fontcolor">Read more...</u></a>
+					</p>
+				</li>
+			</ul>
+		</div>
+		<article>
+			<p id="font2">Contact Us</p><span id="second"></span>
+			<div id="frame4"></div>
+			<div id="formfirst">
+				<p id="formtitle">
+					If you have any questions or tips about improvements to our site, please contact us.
+				</p>
+                
+                <?php
+                    if(empty($_POST['submit'])) {
+                ?>
+                <form action="" method="post">
+                    <input type="text" name="formName" value="Imię i nazwisko" onblur="if(value=='') value = 'Imię i nazwisko'" onfocus="if(value=='Imię i nazwisko') value = ''"/>
+                    <input type="text" name="formEmail" value="E-mail" onblur="if(value=='') value = 'E-mail'" onfocus="if(value=='E-mail') value = ''"/><br />
+                    <textarea name="formText" onblur="if(value=='') value = 'Treść'" onfocus="if(value=='Treść zapytania...') value = ''">Treść zapytania...</textarea><br />
+                    <input type="submit" name="submit" value="Wyślij formularz"/>
+                </form>
+                <?php
+                    } else {
+                        //twoje dane
+                        $email = 'twoj.email@gmail.com';
+                        
+                        //dane z formularza
+                        $formName = $_POST['formName'];
+                        $formEmail = $_POST['formEmail'];
+                        $formText = $_POST['formText'];
+                        
+                        if(!empty($formName) && !empty($formEmail) && !empty($formText)) {
+                            //--- początek funkcji weryfikującej adres e-mail ---
+                            function checkMail($checkmail) {
+                                if(filter_var($checkmail, FILTER_VALIDATE_EMAIL)) {
+                                    if(checkdnsrr(array_pop(explode("@",$checkmail)),"MX")){
+                                        return true;
+                                    }else{
+                                        return false;
+                                    }
+                                } else {
+                                    return false;
+                                }
+                            }
+                            //--- koniec funkcji ---
+                            
+                            if(checkMail($formEmail)) {
+                                //dodatkowe informacje: ip i host użytkownika
+                                $ip = $_SERVER['REMOTE_ADDR'];
+                                $host = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+                                $protocol = strpos(strtolower($_SERVER['SERVER_PROTOCOL']),'https') 
+                                === FALSE ? 'http' : 'https';
+                                $host     = $_SERVER['HTTP_HOST'];
+                                $script   = $_SERVER['SCRIPT_NAME'];
+                                $params   = $_SERVER['QUERY_STRING'];
+                                
+                                $currentUrl = $protocol . '://' . $host . $script . '?' . $params;
+                                
+                                //tworzymy szkielet wiadomości
+                                //treść wiadomości
+                                $mailText = "Treść wiadomości:/n$formText/nOd: $formName, $formEmail ($ip, $host)/nLink: $currentUrl";
+                                
+                                //adres zwrotny
+                                $mailHeader = "From: $formName <$formEmail>";
+                                
+                                //funkcja odpowiedzialna za wysłanie e-maila
+                                @mail($email, '[Zapytanie]', $mailText, $mailHeader) or die('Błąd: wiadomość nie została wysłana');
+                                
+                                //komunikat o poprawnym wysłaniu wiadomości
+                                echo 'Wiadomość została wysłana';
+                            } else {
+                                echo 'Adres e-mail jest niepoprawny';
+                            }
+                        }
+                        else {
+                            //komunikat w przypadku nie powodzenia
+                            echo 'Wypełnij wszystkie pola formularza';
+                        }
+                    }
+                ?>
+			</div>
+			<div id="more">
+				<p id="moretitle">Phone Number:<br>585-898-666</p>
+				<p id="moretitle2">E-mail Adress:<br>piotrowskim@icloud.com</p>
+				<iframe src="https://maps.google.pl/maps?f=q&amp;source=s_q&amp;hl=pl&amp;geocode=&amp;q=Adi%C3%B3s,+Navarra,+Hiszpania&amp;aq=2&amp;oq=Adi%C3%B3s,&amp;sll=42.686126,-1.736419&amp;sspn=0.008864,0.021136&amp;ie=UTF8&amp;hq=&amp;hnear=Adi%C3%B3s,+Navarra,+Hiszpania&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br>
+				<small><a href="https://maps.google.pl/maps?f=q&amp;source=embed&amp;hl=pl&amp;geocode=&amp;q=Adi%C3%B3s,+Navarra,+Hiszpania&amp;aq=2&amp;oq=Adi%C3%B3s,&amp;sll=42.686126,-1.736419&amp;sspn=0.008864,0.021136&amp;ie=UTF8&amp;hq=&amp;hnear=Adi%C3%B3s,+Navarra,+Hiszpania&amp;t=m&amp;z=14&amp;iwloc=A">Wyświetl większą mapę</a></small>
+			</div>
+		</article>
+		<footer>
+			<br><p>Copyright © 2014 Adiós! Designed by <a target="_blank" href="#"><u class="fontcolor">Maciej Piotrowski</u></a></p>
+		</footer>
+	</body>
+</html>

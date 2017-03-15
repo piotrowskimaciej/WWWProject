@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>europe</title>
+		<meta HTTP-EQUIV="Content-Type" charset="utf-8">
+		<style></style>
+		<link rel="Stylesheet" href="../styles.css">
+		<script src="../library/planscroll.js"></script>
+		<script src="../library/jquery.mousewheel.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("body").on("mousewheel", function(){
+					if($(document).scrollTop()>501){
+						$("#select").css("position", "fixed");
+						$("#select").css("top", 0);
+						$("#select").css("right", 0);
+						$("#select").css("width", "30%");
+					}
+					else{
+						$("#select").css("position", "reltive");
+						$("#select").css("top", "auto");
+						$("#select").css("right", "auto");
+						$("#select").css("width", "45%");
+					}
+				});
+				$("body").on("click", "#switch1", function(e){
+					e.preventDefault();
+					console.log("test");
+					$("#europecities").load("europe2.html");
+				})
+				$("body").on("click", "#switch2", function(e){
+					e.preventDefault();
+					$("body").load("#europecities");
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<div id="frame1">
+			</div>
+			<div id="image1">
+				<a href="../index.html"><p id="fontmain">adiós!</p></a>
+				<p id="fontmain2">By Free CSS Templates</p>
+			</div>
+			<nav id="menu1">
+				<ul>
+					<li id="button1">
+						<a href="../index.html"><u>H</u>ome</a>
+					</li>
+					<li id="button2">
+						<a href="plan.html"><u>P</u>lan a Cruise</a>
+					</li>
+					<li id="button3">
+						<a href="../support/support.html">Customer <u>S</u>upport</a>
+					</li>
+					<li id="button4">
+						<a href="../about/about.html">About <u>U</u>s</a>
+					</li>
+					<li id="button5">
+						<a href="../contact/contact.html"><u>C</u>ontact Us</a>
+					</li>
+				</ul>
+			</nav>
+			<div id="image2">
+				<img id="image21" src="pictures/header_picture2.png">
+			</div>
+			<div id="frame2">
+			</div>
+		</header>
+		<div id="menu2europe">
+			<p id="font">Recent Updates</p><span id="first"></span>
+			<div id="frame3"></div>
+			<ul id="list1">
+				<li>
+					<p class="fontlist">
+						<b>July 12, 2007</b><br>
+						<a target="_blank" href="http://pl.lipsum.com/"><b><u class="fontcolor">Lorem Ipsum Dolor</u></b></a><br><br>
+						In posuere eleifend odio quisque semper augue mattis
+						wisi maecenas ligula. <a href="../updates/updates.html"><u class="fontcolor">Read more...</u></a>
+					</p>
+				</li>
+				<li>
+					<p class="fontlist">
+						<b>July 01, 2007</b><br>
+						<a target="_blank" href="http://www.lorem.biz/loremipsum.php"><b><u class="fontcolor">Sagittis Et Convallis</u></b></a><br><br>
+						Donec leo, vivamus fermentum nibh in augue praesent lorem
+						ipsum dolor a lacus at urna congue rutrum.
+						<a href="../updates/updates.html"><u class="fontcolor">Read more...</u></a>
+					</p>
+				</li>
+				<li>
+					<p class="fontlist">
+						<b>June 30, 2007</b><br>
+						<a target="_blank" href="http://www.freecsstemplates.org/preview/joyousness/"><b><u class="fontcolor">Integer Nisl Risus</u></b></a><br><br>
+						Quisque dictum integer nisl risus, sagittis convallis, rutum
+						id, congue, and nibh. <a href="../updates/updates.html"><u class="fontcolor">Read more...</u></a>
+					</p>
+				</li>
+			</ul>
+		</div>
+		<article id="europe">
+			<p id="font2">Europe</p><span id="second"></span>
+			<div id="frame4europe"></div>
+			<form id="europecities">
+				<div>
+					<p class="europetitle">
+						<input type="radio" name="nazwa" value="lisbon">Lisbon
+					</p>
+					<p class="description"><img class="europepictures" src="pictures/lisbon.jpg">	
+						Visit the capital of Portugal, explore the rustic manners, watch the magnificent monuments and 
+						modern art. Learn more about Portugal. All what you wish for at your fingertips.
+					</p>
+				</div>
+				<div>
+					<p class="europetitle">
+						<input type="radio" name="nazwa" value="madrid">Madrid
+					</p>
+					<p class="description"><img class="europepictures" src="pictures/madrid.jpg">
+						Grand Madrid awaits you. Being there is a great satisfaction. Great city, the power of European
+						football - Real Madrid. The beauty of the city at night. You have to see this!
+					</p>
+				</div>
+				<div>
+					<p class="europetitle">
+						<input type="radio" name="nazwa" value="london">London
+					</p>
+					<p class="description"><img class="europepictures" src="pictures/london.jpg">
+						Being in London is more than just a trip. Meet great museums, see the remnants of bygone eras, take
+						part in a wonderful cruise the Thames. Visit one of the greatest football clubs Chelsea or Arsenal!
+					</p>
+				</div>
+				<div>
+					<p class="europetitle">
+						<input type="radio" name="nazwa" value="paris">Paris
+					</p>
+					<p class="description"><img class="europepictures" src="pictures/paris.jpg">
+						Visit Paris, explore the great history of this city, the capital of medieval Christianity. Climb the 
+						Eiffel Tower, marvel at the stunning architecture of Paris, See what life was like musketeers.
+					</p>
+				</div>
+				<div>
+					<p class="europetitle">
+						<input type="radio" name="nazwa" value="warsaw">Warsaw
+					</p>
+					<p class="description"><img class="europepictures" src="pictures/warsaw.jpg">
+						Explore the history of the city, which had fought during the First and Second World War, tour the
+						magnificent museums, castles explore The country's culture. Visit the Polish.
+					</p>
+				</div>
+				<div id="forme1">
+					<a id="switch1" class="formeur1" href="europe2.html">2</a>
+					<a id="switch2" class="formeur1" href="europe.html">1</a>
+				</div>
+			</form>
+			<div id="select">
+				<form id="selectstyle">
+					<p id="selecttitle">Plan your trip</p>
+					Number of persons:<br><input type="range" min="1" max="4"><br>
+					Baggage (kg):<br><input type="range" min="1" max="200"><br>
+					Additional baggage:<input class="element" type="checkbox" name="Additional baggage" value="yes"><br>
+					Date from:<br><input class="element" type="date" name="date" placeholder="rrrr-mm-dd" required title="Enter date"><br>
+					Weeks:<br>
+					<select class="element" name="select">
+						<option>1 week</option>
+						<option>2 weeks</option>
+						<option>3 weeks</option>
+					</select><br>
+					Means of transport:<br>
+					<select class="element" name="select">
+						<option>Ship</option>
+						<option>Plane</option>
+						<option>Car</option>
+					</select><br>
+					Hotel type:<br>
+					<select class="element" name="select">
+						<option>3 Stars</option>
+						<option>4 Stars</option>
+						<option>5 Stars</option>
+					</select><br>
+					<input type="submit" value="Select">
+					<input type="reset" value="Clear">
+				</form>
+			</div>
+		</article>
+		<footer>
+			<br><p>Copyright © 2014 Adiós! Designed by <a target="_blank" href="#"><u class="fontcolor">Maciej Piotrowski</u></a></p>
+		</footer>
+	</body>
+</html>
